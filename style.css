@@ -1,0 +1,155 @@
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span {
+    padding-left: 5px;
+}
+li a {
+    padding: 5px;
+    
+}
+
+.cart ion-icon {
+   vertical-align: bottom;
+   font-size: 20px;
+   padding-right: 5px;
+}
+
+.cart a {
+    
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.add-cart {
+    position: absolute;
+    width: 30%;
+    background-color: darkmagenta;
+    transition: all 0,3s ease-in-out;
+    opacity: pointer;
+    text-align: center;
+}
+.span4 img {
+    margin-right: 10px;
+}
+.span4 .img-left {
+    float: left;
+    width: 49%; 
+}
+.span4 .img-right {
+    float: right;
+    width: 49%; 
+}
+.btn-primary {
+    color:white;
+    background-color: red;
+    border-color: black;
+}
+.btn-primary:hover{
+    background-color: black;
+}
+.btn-primary:active:focus{
+    background-color: black;
+}
+.container {
+    margin-top: 70px;
+}
+
+.textt {
+    color: white;
+    font-size: .9vw;
+    font-size: 14px;
+}
+.content-heading{
+    color: white;
+}
+h2{
+    color: white;
+}
+
+.box{
+    width: 49%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.logoo{
+    width: 190px;
+
+}
+.shop {
+    width: 70px;
+    margin-right: 20px;
+    
+}
+.mania {
+
+    margin-left: 60%;
+    float: right;
+
+}
+
+
+.text {
+    float: left;
+}
+.card {
+    margin-top: 30px;
+}
+body {
+    background-color:black;
+    margin-left: 5px;
+}
+.carousel-inner {
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px; 
+    border-color: #fff;
+        border-style: solid;
+}
+.modal-title{
+    text-align: center;
+}
+
+.titel-name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.modalt{
+    margin-left: 35px;
+    margin-top: 20px;
+    color: black;
+}
+
+.footer {
+    background-color:rgb(119, 9, 9);
+    margin-top: 25px;
+    border-top: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px; 
+    border-color: #fff;
+        border-style: solid;
+}
+.text-uppercase {
+    color: white;
+}
+.fot {
+ color: #fff;  
+}
+
+
+.roww {
+    text-align: center;
+}
+.top-title {
+    
+    text-align: center;
+    font-style: oblique;
+    color: tomato;
+}

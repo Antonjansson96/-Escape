@@ -1,0 +1,129 @@
+/*index page*/
+
+
+
+body {
+    background: #eecda3;
+    background: -webkit-linear-gradient(to right, #3d85d8, #405fe6);
+    background: linear-gradient(to right, #ec6f6f, #5375e4);
+    min-height: 100vh;
+  }
+
+.navbar {
+    top: 0;
+    position: sticky;
+    z-index: 2;
+}
+
+footer {
+    
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cardcheckout {
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 600px !important;
+    width: 100% !important;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 200px !important;
+    max-height: auto !important;
+}
+
+.orderdiv{
+  margin-left: 250px;
+}
+
+.quantitydiv{
+    margin-bottom: 10px;
+}
+
+.btn{
+    margin:2px;
+    
+}
+.btn btn-primary{
+    color: red;
+}
+.orderprice{
+    padding: 15px !important;
+    font-size: 1.5em !important;
+    font-weight: bold;
+}
+
+.footer {
+    background-color:rgb(119, 9, 9);
+    margin-top: 200px;
+    border-top: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px; 
+    border-color: #fff;
+        border-style: solid;
+}
+.text-uppercase {
+    color: white;
+}
+.fot {
+ color: #fff;  
+}
+.btn {
+    margin-right: 150px;
+}
+
+.roww {
+    text-align: center;
+}
+.top-title {
+    
+    text-align: center;
+    font-style: oblique;
+    color: tomato;
+}
+.logoo{
+    width: 190px;
+
+}
+.shop {
+    width: 70px;
+    margin-right: 20px;
+    
+}
+.mania {
+
+    margin-left: 60%;
+    float: right;
+
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+   
+}
+
+
+
+.cart ion-icon {
+   vertical-align: bottom;
+   font-size: 20px;
+   padding-right: 5px;
+}
+
+.cart a {
+   
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.add-cart {
+    position: absolute;
+    width: 30%;
+    background-color: darkmagenta;
+    transition: all 0,3s ease-in-out;
+    opacity: pointer;
+    text-align: center;
+}

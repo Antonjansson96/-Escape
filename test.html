@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <!--hämtar search så vi kan söka på en book-->
+    <script>
+        function bookSearch() {
+            let search = document.getElementById('search').value;
+            // document.getElementById('results').innerHTML = "";
+            $.getJSON("https://www.googleapis.com/books/v1/volumes?q=" + search, function (jsondata) {
+                //  for(i=0; i< jsondata.items.length; i++){
+                //     results.innerHTML += "<h2>" + jsondata.items[i].volumeInfo.title + "</h2>";
+                // }
+                showCards(jsondata);
+            });
+
+        }
+
+        function showCards(jsondata) {
+            let carddeck = $("#all-cards");
+            carddeck.empty();
+            let cardrow = document.createElement("div");
+            cardrow.setAttribute("class", "row");
+            for (i = 0; i < jsondata.items.length; i++) {
+                let cardcolumn = document.createElement("div");
+                cardcolumn.setAttribute("class", "col-sm-12 col-md-6 col-lg-3 card-margin");
+
+                let card = document.createElement("div");
+                card.setAttribute("class", "card");
+                card.setAttribute("style", "width:100% ");
+
+                let cardimage = document.createElement("img");
+                cardimage.setAttribute("class", "card-img-top");
+                cardimage.setAttribute("src", jsondata.items[i].volumeInfo.imageLinks.smallThumbnail);
+
+                let cardbody = document.createElement("div");
+                cardbody.setAttribute("class", "card-body");
+
+                let cardtitle = document.createElement("h5");
+                cardtitle.setAttribute("class", "card-title");
+                cardtitle.innerHTML += jsondata.items[i].volumeInfo.title;
+
+                let cardtext = document.createElement("p");
+                cardtext.setAttribute("class" , "card-text");
+                cardtext.innerHTML += jsondata.items[i].volumeInfo.description;
+
+                let cardbtn = document.createElement("button");
+                cardbtn.setAttribute("class", "btn-primary");
+                cardbtn.innerHTML += "Read more";
+
+
+                card.append(cardimage);
+                cardbody.append(cardtitle);
+                cardbody.append(cardtext);
+                card.append(cardbody);
+                cardbody.append(cardbtn);
+                cardcolumn.append(card);
+                cardrow.append(cardcolumn);
+            }
+
+
+            carddeck.append(cardrow);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- FUNKAR INTE <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+              <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="bookSearch()">Search</button>
+            </form>
+          </nav>FUNKAR INTE SLUT-->
+        <!--sök funktionen som söker efter böcker-->
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <span style="margin-right: 15px; margin-left: 15px;">Seacrh for book</span>
+            <input id="search" placeholder="Title or Author"> <button id="button" type="button"
+                onclick="bookSearch()">Go!</button>
+        </div>
+
+        <!--innerhtml part-->
+
+        <div id="all-cards" class="card-deck">
+          <!-- <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>--> 
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+</html>
